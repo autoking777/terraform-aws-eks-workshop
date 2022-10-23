@@ -1,9 +1,12 @@
 terraform {
   backend "s3" {
-    bucket         = "<REPLACE_WITH_YOUR_REMOTESTATE_BUCKETNAME>"
-    dynamodb_table = "<REPLACE_WITH_YOUR_DYNAMODB_TABLENAME>"
-    key            = "terraform-aws-eks-workshop.tfstate"
-    region         = "us-west-1"
+    # Replace this with your bucket name!
+    bucket         = "terraform-king7"
+    key            = "global/s3/terraform.tfstate"
+    region         = "us-east-1"
+
+    # Replace this with your DynamoDB table name!
+    dynamodb_table = "terraform-king77-locks"
     encrypt        = true
   }
 }
